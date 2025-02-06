@@ -7,3 +7,5 @@ console.log(first, second)
 
 writeFileSync('./contents/subfolder/first.txt', 'Hello, World!');
 writeFileSync('./contents/subfolder/second.txt', 'Hello, Bangladesh!');
+
+writeFileSync('./contents/subfolder/result-sync.txt', `Here is the result: ${first}, ${second}`, {flag: 'a'});

@@ -1,17 +1,11 @@
-//Modules
+const os = require('os');
 
-const names = require ('./4-names.js');
-const sayHi = require ('./5-utlis.js');
-const data = require ('./6-alternative-flavor.js');
+//information about the current user
 
 
-require ('./7-mind-grenade.js');
-
-//sayHi('susan')
-//sayHi('bob')         
-//sayHi(names.john)
-//sayHi(names.peter)         
+const user = os.userInfo();
+console.log(user);
 
 
-   
-
+//method returns the system uptime in seconds
+console.log(`The system uptime is ${os.uptime()} seconds`);

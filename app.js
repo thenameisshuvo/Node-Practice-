@@ -1,11 +1,13 @@
-const {readFileSync,writeFileSync} = require('fs');
-
-const first = readFileSync('./contents/subfolder/first.txt', 'utf8');
-const second = readFileSync('./contents/subfolder/second.txt', 'utf8');
-console.log(first, second)
+const {readFile, writeFile} = require('fs');
 
 
-writeFileSync('./contents/subfolder/first.txt', 'Hello, World!');
-writeFileSync('./contents/subfolder/second.txt', 'Hello, Bangladesh!');
+readFile('./contents/subfolder/first.txt', (err, result) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(result);
+}
+)
 
-writeFileSync('./contents/subfolder/result-sync.txt', `Here is the result: ${first}, ${second}`, {flag: 'a'});
+
